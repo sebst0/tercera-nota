@@ -1,4 +1,4 @@
-
+package Unidad1;
 import java.util.Scanner;
 
 public class Ejercicio03 {
@@ -14,7 +14,7 @@ public class Ejercicio03 {
         System.out.println("ingrese su altura");
         double altura = leer.nextDouble();
 
-        System.out.println("Hola amigo, tu nombre es" + nombre + ". Tienes " + edad + " años y tu altura es de " + altura);
+        System.out.println("Hola amigo, tu nombre es " + nombre + ". Tienes " + edad + " años y tu altura es de " + altura);
         
     }
     

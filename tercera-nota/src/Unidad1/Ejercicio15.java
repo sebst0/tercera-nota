@@ -9,7 +9,7 @@ public class Ejercicio15 {
             }
             
         }
-        System.out.println("La cantidad de numeros pares es: " + j);
+        System.out.println("La cantidad de numeros pares entre 1 y 100 es: " + j);
     }
     
 }

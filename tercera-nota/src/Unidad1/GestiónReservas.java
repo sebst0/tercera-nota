@@ -28,11 +28,15 @@ public class GestiónReservas {
                 leer.nextLine();
                 System.out.println("Ingrese el nombre del cliente");
                 String nombre = leer.nextLine();
-                System.out.println("Ingrese el numero de la habitacion (101, 102, 103, 104, 105, 106)");
-                int numeroHabitacion = leer.nextInt(); 
-
-
+                
                 int i = 6;
+                do {
+
+                    System.out.println("Ingrese el numero de la habitacion (101, 102, 103, 104, 105, 106)");
+                int numeroHabitacion = leer.nextInt(); 
+                
+                i = 6;
+
 
                 if (numeroHabitacion == 101) {
                     i = 0; 
@@ -55,14 +59,12 @@ public class GestiónReservas {
 
                 if (i == 6) {
                     System.out.println("error, habitacion equivocada");
-                    
+                    } else if (estadoHabitacion[i].equals("X")) {
+                    System.out.println("La habitacion " + habitaciones[i] + " esta ocupada");
+                    i = 6;
                 }
-
-
-                if (estadoHabitacion[i].equals("X")) {
-                    System.out.println("La habitación " + habitaciones[i] + " esta ocupada");
-                } else {
-
+                
+                } while (i == 6);
 
                 System.out.println("ingrese el numero de noches");
                 int noches = leer.nextInt();
@@ -80,15 +82,17 @@ public class GestiónReservas {
                 System.out.println("reserva hecha");
                 System.out.println("Cliente: " + nombre + " total a pagar es de: " + valorEstadia);
 
-                 }
+                
                 break;
 
             case 2:
 
-                System.out.println("ingrese numero de habitacion que desea cancelar la reserva");
-                int numeroCancelacion = leer.nextInt();
-
                 int k = 6;
+                
+                do {
+
+                    System.out.println("ingrese numero de habitacion que desea cancelar la reserva");
+                int numeroCancelacion = leer.nextInt();
 
                 if (numeroCancelacion == 101) {
                     k = 0; 
@@ -117,8 +121,12 @@ public class GestiónReservas {
 
                 if (k == 6) {
                     System.out.println("error, habitacion equivocada");
+                    k = 6;
                     
                 }
+                    
+                } while (k == 6);
+
                
                 break;
             case 3:
